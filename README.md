@@ -1,7 +1,10 @@
 # run
 ```bash
+git clone git@github.com:SuCicada/SuCicadaBot.git
+cd SuCicadaBot
+
 pip3 install poetry 
-poetry install ``
+poetry install
 poetry run python bot_console.py
 poetry run python bot_telegram.py
 ```
