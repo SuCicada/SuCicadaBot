@@ -27,7 +27,7 @@ scheduler_list = [
     Job(" 0 21 * * *", ["当日运动, 耗时30min"]),
     Job("30 00 * * *", ["你该睡觉呢"]),
     Job("00 01 * * *", ["滚去睡觉了吧"]),
-    Job(CronTrigger(second="*/5", minute='*'), ["test 测试我是谁，"]),
+    # Job(CronTrigger(second="*/5", minute='*'), ["test 测试我是谁，"]),
 ]
 
 timezone = pytz.timezone("Asia/Shanghai")
