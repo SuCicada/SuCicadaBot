@@ -1,12 +1,17 @@
 # run
 ```bash
-git clone git@github.com:SuCicada/SuCicadaBot.git
+git clone git@github.com:SuCicada/SuCicadaBot.git --recurse-submodules
 cd SuCicadaBot
+bash install.sh
 
 pip3 install poetry 
 poetry install
 poetry run python bot_console.py
 poetry run python bot_telegram.py
+```
+## update
+```bash
+bash update.sh
 ```
 
 

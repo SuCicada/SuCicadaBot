@@ -1,4 +1,4 @@
 [submodule "nonebot_console_adapter"]
 	path = nonebot_console_adapter
 	url = git@github.com:SuCicada/nonebot-adapter-console.git
-	branch = sucicada
+	branch = master

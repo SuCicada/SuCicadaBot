@@ -20,5 +20,4 @@ function git_sparse_clone() (
 cd "$(dirname "$0")"
 git_sparse_clone "git@github.com:SuCicada/SuConfig.git" "SuConfig" "SuCicadaBot/"
 
-ls -lR SuConfig
 cp -rv SuConfig/SuCicadaBot/conf/. conf/
