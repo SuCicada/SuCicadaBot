@@ -3,6 +3,7 @@
 	url = git@github.com:SuCicada/nonebot-adapter-console.git
 	branch = master
 
+
 [submodule "conf"]
 	path = conf
 	url = git@github.com:SuCicada/SuCicadaBot-Config.git
