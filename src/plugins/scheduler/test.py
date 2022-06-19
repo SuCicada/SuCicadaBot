@@ -6,6 +6,6 @@ scheduler = AsyncIOScheduler(timezone=str(tzlocal.get_localzone()))
 
 export().scheduler = scheduler
 export().scheduler_after = lambda i: print(i)
-import main
+from .main import *
 
 scheduler.start()

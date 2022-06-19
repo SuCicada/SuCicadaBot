@@ -18,16 +18,16 @@ class Job:
 
 
 scheduler_list = [
-    Job("00 09 * * *", ["起床了吗"]),
-    Job("10 09 * * *", ["吃早饭"]),
-    Job("30 12 * * *", ["滚去吃午饭"]),
-    Job("00 19 * * *", ["滚去吃晚饭"]),
+    Job("00 09 * * *", *["起床了吗"]),
+    Job("10 09 * * *", *["吃早饭"]),
+    Job("30 12 * * *", *["滚去吃午饭"]),
+    Job("00 19 * * *", *["滚去吃晚饭"]),
 
-    Job(" 0,30 10-12,14-23 * * *", ["起来休息活动一下,并且补充水杯"]),
-    Job(" 0 21 * * *", ["当日运动, 耗时30min"]),
-    Job("30 00 * * *", ["你该睡觉呢"]),
-    Job("00 01 * * *", ["滚去睡觉了吧"]),
-    # Job(CronTrigger(second="*/5", minute='*'), ["test 测试我是谁，"]),
+    Job(" 0,30 10-12,14-23 * * *", *["起来休息活动一下,并且补充水杯"]),
+    Job(" 0 21 * * *", *["当日运动, 耗时30min"]),
+    Job("30 00 * * *", *["你该睡觉呢"]),
+    Job("00 01 * * *", *["滚去睡觉了吧"]),
+    # Job(CronTrigger(second="*/5", minute='*'), "test 测试我是谁，"),
 ]
 
 timezone = pytz.timezone("Asia/Shanghai")
@@ -45,7 +45,8 @@ for scheduler_info in scheduler_list:
         args=scheduler_info.args
     )
     async def run_alert(alert_msg):
-        msg = f"{datetime.now()} {alert_msg}"
+        now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        msg = f"{alert_msg}\n{now_time}"
         print(msg)
         await scheduler_after(msg)
 

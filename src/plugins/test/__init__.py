@@ -17,8 +17,8 @@ SayakaBot = on_command('', rule=to_me(), priority=5)
 async def handle_first_receive(bot: Bot, event: Event):
     # print(bot)
     # print(event)
-
-    await SayakaBot.send(f"你说了：{event.get_message()}")
+    # f"你说了：{event.get_message()}"
+    await SayakaBot.send("嗯")
 
 # async def test():
 #     while True:
